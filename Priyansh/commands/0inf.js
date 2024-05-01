@@ -24,37 +24,31 @@ const time = process.uptime(),
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =                                     
-["https://i.imgur.com/eDbdlvd.jpg"];
-var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ ̿)🇮🇳 𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 🇮🇳 
-(⌐▀͡ ̯ʖ▀)︻̷┻̿═━一-
+["https://i.imgur.com/GMBpQCG.jpg","https://i.imgur.com/aEMSy4t.jpg","https://i.imgur.com/MfSfxfq.jpg","https://i.imgur.com/iXlteLy.jpg","https://i.imgur.com/cfHdffL.jpg","https://i.imgur.com/YVczVn6.jpg","https://i.imgur.com/7gR1kHH.jpg"];
+var callback = () => api.sendMessage({body:`🙌𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍🙌
 
-☄️Bot Name︎︎︎☄️  ${global.config.BOTNAME}
+𝐁𝐎𝐓 𝐍𝐀𝐌𝐄 【${global.config.BOTNAME}】
 
-🔥Bot Admin🔥☞︎︎︎☜︎︎︎✰ ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙💔🥀
+🙈𝐁𝐎𝐓 𝐎𝐖𝐍𝐄𝐑 𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊 𝐋𝐈𝐍𝐊🙈➪ https://www.facebook.com/profile.php?id=100092692942495&mibextid=ZbWKwL
 
-🙈bot andmin owner facebook id link🙈➪ www.facebook.com/priyanshu.rajput.official 💞🕊️
+✧══════•❁•══════✧
 
-👋For Any Kind Of Help Contact On Telegram  Username 👉 @Priyanshrajput😇
+🌸𝐁𝐎𝐓 𝐏𝐑𝐎𝐅𝐈𝐗🌸☞︎︎︎ ${global.config.PREFIX}☜︎︎︎✰
 
-✧══════•❁❀❁•══════✧
+♥️𝐁𝐎𝐓 𝐎𝐖𝐍𝐄𝐑♥️ ☞︎︎︎𝐏𝐑𝐈𝐘𝐀🤩☜︎︎︎✰ 
 
-🌸Bot Prefix🌸☞︎︎︎☜︎︎︎✰ ${global.config.PREFIX}
+🥳𝐔𝐏𝐓𝐈𝐌𝐄🥳
 
-♥️Bot Owner♥️ ☞︎︎︎☜︎︎︎✰ 𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭
+🌪️𝐓𝐎𝐃𝐀𝐘 𝐈𝐒🌪️ ☞︎︎︎ ${juswa} ☜︎︎︎✰
 
-🥳UPTIME🥳
+⚡𝐁𝐎𝐓 𝐈𝐒 𝐑𝐔𝐍𝐍𝐈𝐍𝐆⚡ ${hours}:${minutes}:${seconds}.
 
-🌪️Today is🌪️ ☞︎︎︎☜︎︎︎✰ ${juswa} 
-
-⚡Bot is running⚡ ${hours}:${minutes}:${seconds}.
-
-✅Thanks for using ${global.config.BOTNAME} Bot🖤
+✅𝐓𝐇𝐀𝐍𝐊𝐒 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 ${global.config.BOTNAME} 𝐁𝐎𝐓🖤
 
 
 🦢🍒•••ꞪɛᏒɛ ɪʂ ɮ❍┼ ❍ωɳɜɽ ɳaʍɜ•••🌷💞
-┏━🕊️━━°❀•°:🎀🧸💙🧸🎀:°•❀°━━💞━┓
-🌸✦✧✧✧✧✰🍒ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙🌿✰✧✧✧✧✦🌸
-┗━🕊️━━°❀•°:🎀🧸💙🧸🎀:°•❀°━━💞━┛
+┏━━━°❀•°::°•❀°━━━┓\n          ✦ 𝐏𝐑𝐈𝐘𝐀 ✦
+┗━━━°❀•°::°•❀°━━━┛
 
 
 `,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 

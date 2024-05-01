@@ -14,6 +14,6 @@ module.exports.run = async function({ api, event, args }) {
    let namee = await api.getThreadInfo(tid)
   if (!tid) return api.removeUserFromGroup(api.getCurrentUserID(), event.threadID);
 
-else return api.removeUserFromGroup(api.getCurrentUserID(), tid, () => api.sendMessage("The bot has left this group", event.threadID, event.messageID));
+else return api.removeUserFromGroup(api.getCurrentUserID(), tid, () => api.sendMessage("[OK] MR.PARFECT 👍", event.threadID, event.messageID));
 
 }

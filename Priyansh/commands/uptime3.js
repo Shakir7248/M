@@ -116,18 +116,18 @@ let a = await loadImage(pathAva)
     ctx.save();
     ctx.font = "350px Grandstander";
     ctx.fillStyle = "#000"
-    ctx.fillText("𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭", canvas.width / 2 - 660, 1000);
+    ctx.fillText("𝐌𝐑.𝐏𝐀𝐑𝐅𝐄𝐂𝐓", canvas.width / 2 - 660, 1000);
     ctx.fillText(`${z_1}:${x_1}:${y_1}`, canvas.width / 2 - 630, 2000);
     ctx.restore();
     ctx.save();
     ctx.textAlign = "start";
     ctx.font = "250px Grandstander";
     ctx.fillStyle = "#000"
-    ctx.fillText("priyanshu.rajput.official", 1200, 2750);
+    ctx.fillText("mr.parfect.official", 1200, 2750);
     ctx.fillStyle = "#FFF"
-    ctx.fillText("priyanshu192", 1600, 3150);
+    ctx.fillText("mr.Parfect", 1600, 3150);
     ctx.fillStyle = "#000"
-   ctx.fillText("pri_yanshu12", 2000, 3600);
+   ctx.fillText("mr.Parfect", 2000, 3600);
     ctx.beginPath();
     const imageBuffer = canvas.toBuffer();
     fs.writeFileSync(pathImg, imageBuffer);

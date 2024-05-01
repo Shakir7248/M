@@ -1,4 +1,4 @@
- const num = 10 //number of times spam gets banned -1, for example 5 times 6 times will get banned
+ const num = 20 //number of times spam gets banned -1, for example 5 times 6 times will get banned
 const timee = 120 // During `timee` spam `num` times will be banned
  module.exports.config = {
   name: "spamban",

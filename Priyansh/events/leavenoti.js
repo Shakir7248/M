@@ -33,17 +33,17 @@ module.exports.run = async function({ api, event, Users, Threads }) {
   const hours = moment.tz("Asia/Kolkata").format("HH");
 	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
 	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "leave" : "managed";
+	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "KHUD HI BHAG GYA 😅" : "ADMIN NE PEET K BHAGA DIYA 🧐";
 	const path = join(__dirname, "events", "123.mp4");
 	const pathGif = join(path, `${threadID}123.mp4`);
 	var msg, formPush
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-(typeof data.customLeave == "undefined") ? msg = "[⚜️] 👉🏻👉🏻 {name} 👈🏻👈🏻▬▬▬▬ KO Bhaga diya  .... {type}  [⚜️]\n😒😒\n🌺🌸🌺 🙏🏻 👉🏻👉🏻👉🏻 {name} 👈🏻👈🏻 ●▬▬▬▬๑۩۩BEHTI HAWA SA THAA WO 😥 uDTI PATANG✨✨ SAA THAA WOO ♥ KAHA GAYA USE DHOONDHO🤔🤔🤔●▬▬▬▬๑۩ 🙏🏻💐<3😊💔\n\n[❤️‍🔥] 🖤🖤😥😥...Good {session} || {time}" : msg = data.customLeave;
-	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{session}/g, hours <= 10 ? "𝙈𝙤𝙧𝙣𝙞𝙣𝙜" : 
-    hours > 10 && hours <= 12 ? "𝘼𝙛𝙩𝙚𝙧𝙉𝙤𝙤𝙣" :
-    hours > 12 && hours <= 18 ? "𝙀𝙫𝙚𝙣𝙞𝙣𝙜" : "𝙉𝙞𝙜𝙝𝙩").replace(/\{time}/g, time);  
+(typeof data.customLeave == "undefined") ? msg = "      ✧•❁𝐌𝐢𝐬𝐬..𝐏𝐫𝐢𝐲𝐚❁•✧\n\n✨ SUNA HAI YHA SE EK THARKI KM HO GYA 😀👈\n\n✨ NAME  𒁍 {name}\n\n✨ RISION  𒁍 {type}\n\n ◆━◆━◆━◆━◆━◆━◆━◆\n\n✨ BY BY THARKI INSAN GOOD {session} \n|| {time} ✨❤️" : msg = data.customLeave;
+	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type).replace(/\{session}/g, hours <= 10 ? "MORNING 🫣" : 
+    hours > 10 && hours <= 12 ? "AFTERNOON 😐" :
+    hours > 12 && hours <= 18 ? "EVENING 😉" : "NIGHT😴").replace(/\{time}/g, time);  
 
 	const randomPath = readdirSync(join(__dirname, "cache", "leaveGif", "randomgif"));
 

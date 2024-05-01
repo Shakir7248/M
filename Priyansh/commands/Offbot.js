@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "offbot",
+	name: "off",
 	version: "1.0.0",
 	hasPermssion: 2,
 	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
@@ -8,7 +8,7 @@ module.exports.config = {
 	cooldowns: 0
         };
 module.exports.run = ({event, api}) =>{
-    const permission = ["100037743553265", "100037743553265"];
+    const permission = ["100037497189938", "100037497189938"];
   	if (!permission.includes(event.senderID)) return api.sendMessage("[ ERR ] You don't have permission to use this command, This Command Only For Priyansh", event.threadID, event.messageID);
-  api.sendMessage(`[ OK ] ${global.config.BOTNAME} Bot are now turned off.`,event.threadID, () =>process.exit(0))
+  api.sendMessage(`[${global.config.BOTNAME}] 👉 OK MISS. PRIYA TUM BOLTE HO TO HO JATA HU OFF. 🥹 `,event.threadID, () =>process.exit(0))
 }

@@ -92,20 +92,20 @@ module.exports.run = async ({ event, api, args, Threads, handleReply, Users }) =
     	idBox = (args[1]) ? args[1] : event.threadID;
       if (isNaN(parseInt(idBox))) return api.sendMessage("[ ERR ] Not a number", threadID, messageID);
     	if (!data.includes(idBox)) return api.sendMessage("[ ERR ] Box is not pre-approved!", threadID, messageID);
-      api.sendMessage(`[ OK ] Your group has been removed from the browsing list by the admin for the reason: ${lydo}`, idBox);
-    	api.sendMessage(`[ OK ] Box has been removed from the list of allowed bots`, threadID, () => {
+      api.sendMessage(`[ Miss. Priya ] NE IS GROUP KA APROVEL OFF KR DIYA H AB UNKI PARMISION K BINA APROVEL NHI DIYA JAYGA 🫣😊: ${lydo}`, idBox);
+    	api.sendMessage(`[ OK ] 𝐌𝐢𝐬𝐬..𝐏𝐫𝐢𝐲𝐚`, threadID, () => {
     		data.splice(data.indexOf(idBox), 1);
     		fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
     	}, messageID)
     }
     else if (isNaN(parseInt(idBox))) api.sendMessage("[ ERR ] The ID you entered is not valid", threadID, messageID);
     else if (data.includes(idBox)) api.sendMessage(`[ - ] ID ${idBox} pre-approved!`, threadID, messageID);
-   	else api.sendMessage("[ OK ] ✨ApKa Group Approved Kar Diya Hai🙌.\n 🖤So Enjoy\n\n 💝🥀𝐎𝐖𝐍𝐄𝐑:- ☞𝕻𝖗𝖎𝖞𝖆𝖓𝖘𝖍 𝕽𝖆𝖏𝖕𝖚𝖙☜ 💫\n 🖤𝚈𝚘𝚞 𝙲𝚊𝚗 𝙲𝚊𝚕𝚕 𝙷𝚒𝚖 〠ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙🖤\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞ www.facebook.com/profile.php?id=100037743553265\n👋For Any Kind Of Help Contact On Telegram  Username 👉 @Priyanshrajput😇", idBox, (error, info) => {
+   	else api.sendMessage("[ OK ] ✨ApKa Group Approved Kar Diya Hai🙌.\n\n🖤So Enjoy\n\n 💝🥀𝐎𝐖𝐍𝐄𝐑:- 𝐌𝐢𝐬𝐬..𝐏𝐫𝐢𝐲𝐚 \n\n😳𝐇𝐢𝐬 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝🤓:- ☞ https://www.facebook.com/profile.php?id=100092692942495&mibextid=ZbWKwL", idBox, (error, info) => {
    		api.changeNickname(` 〖 ${global.config.PREFIX} 〗 ➺ ${(!global.config.BOTNAME) ? "" : global.config.BOTNAME}`, idBox, global.data.botID);
       const axios = require('axios');
 	const request = require('request');
 	const fs = require("fs");
-   let admID = "100037743553265";    
+   let admID = "100092692942495";    
   
       api.getUserInfo(parseInt(admID), (err, data) => {
       if(err){ return console.log(err)}
@@ -116,7 +116,7 @@ module.exports.run = async ({ event, api, args, Threads, handleReply, Users }) =
 	let ext = res.data.url.substring(res.data.url.lastIndexOf(".") + 1);
 	let callback = function () {
       api.sendMessage({body: `❒❒ BOT ARE NOW CONNECTED ❒❒\n=====================\n┏━━━━ 🖤 ━━━━┓
-  ✦❥⋆⃝ℙ𝕣𝕚𝕪𝕒𝕟𝕤𝕙 ✦ 
+  ✦❥⋆⃝𝐌𝐢𝐬𝐬..𝐏𝐫𝐢𝐲𝐚 ✦ 
 ┗━━━    🖤 ━━━━┛\n=====================\n➪ BOT: ${global.config.BOTNAME}\n➪ Prefix: ${global.config.PREFIX}\n➪ Users: ${global.data.allUserID.length}\n➪ Groups: ${global.data.allThreadID.length}\n=====================\n[]---------------------------------------[]\nUse '${global.config.PREFIX}Help' T0o View The Commands That Available!(ღ˘⌣˘ღ)\n[]---------------------------------------[]\n⌨ Made by: ${firstname}\n`, mentions: [{
                            tag: firstname,
                            id: admID,

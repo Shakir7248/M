@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>zenzapis.xyz</title>
-    <script src="//www.google.com/adsense/domains/caf.js?abp=1"></script>    <style media="screen">
+    <style media="screen">
 .asset_star0 {
 	background: url('//d38psrni17bvxu.cloudfront.net/themes/assets/star0.gif') no-repeat center;
 	width: 13px;
@@ -239,193 +239,7 @@ h1 {
         'colorSearchButtonText': '#fff'
     };
     </script>
-<script type="text/javascript">var isAdult=false;     var containerNames=[];     var uniqueTrackingID='MTY5NzQ1NjU4My43NzM0OmZkZWVhOWM3MThlMDZhZDBjNTEyMTFmZGYwYTYxYWFiNmQ1NzQzYzY4MTNiMzdiZTM0ZWRiNWIyZGM1YWZlMTk6NjUyZDIxYzdiY2QwNw==';     var search='';     var themedata='fENsZWFuUGVwcGVybWludEJsYWNrfHw1Y2U4NHxidWNrZXQxMDN8fHx8fHw2NTJkMjFjN2JjY2U2fHx8MTY5NzQ1NjU4My43ODAzfGQ4Y2Y1YzQ2OTIxNmFjNGY2NjVhYjNhODU4N2MyZmFhYzA1Zjk3ZjB8fHx8fDF8fDB8MHx8fHwxfHx8fHwwfDB8fHx8fHx8fHx8MHwwfHwwfHx8MHwwfGV5Sm9iQ0k2SW1WdUluMD18fDF8VzEwPXwxNTRiY2I0YThmNjBjNTNmNmRhNGEwODU3NGU4YWYyZTM3ZDdkNWE1fDB8ZHAtdGVhbWludGVybmV0MDlfM3BofDB8MHw=';     var domain='zenzapis.xyz';     var scriptPath='';     var adtest='off'; </script><script type="text/javascript">if(top.location!==location) { top.location.href=location.protocol + '//' + location.host + location.pathname + (location.search ? location.search + '&' : '?') + '_xafvr=ODIwZTdjNzQwNDUzM2IyYzA4YThjMTIyMmE0NjBhMjcyOTJiYWFlYiw2NTJkMjFjN2JlODBi'; } </script><script>
-var pageLoadedCallbackTriggered = false;
-var fallbackTriggered = false;
-var formerCalledArguments = false;
-
-var pageOptions = {
-    'pubId': 'dp-teaminternet01',
-    'resultsPageBaseUrl': '//' + location.host + '/?ts=',
-    'fontFamily': 'arial',
-    'optimizeTerms': true,
-    'maxTermLength': 40,
-    'adtest': true,
-    'clicktrackUrl': '//' + location.host + '/track.php?',
-    'attributionText': 'Ads',
-    'colorAttribution': '#b7b7b7',
-    'fontSizeAttribution': 16,
-    'attributionBold': false,
-    'rolloverLinkBold': false,
-    'fontFamilyAttribution': 'arial',
-    'adLoadedCallback': function(containerName, adsLoaded, isExperimentVariant, callbackOptions) {
-        if (!adsLoaded) {
-            try {
-                var ele = document.getElementById(container).getElementsByTagName('iframe')[0];
-                var vars = JSON.parse(ele.name.substr(ele.id.length + 1));
-                if (typeof vars[ele.id].type == "string" && vars[ele.id].type == "relatedsearch") {
-                    relatedFallback((function () {
-                        relatedCallback(vars[ele.id]);
-                    }));
-                }
-            } catch (err) {
-                if (!(err instanceof SyntaxError)) {
-                    throw err;
-                }
-            }
-        } else if (containerName in containerNames) {
-
-            var data = {
-                containerName: containerName,
-                adsLoaded: adsLoaded,
-                isExperimentVariant: isExperimentVariant,
-                callbackOptions: callbackOptions,
-                terms: pageOptions.terms
-            }
-
-            ajaxQuery(
-                scriptPath + "/track.php"
-                + "?toggle=adloaded"
-                + "&uid=" + encodeURIComponent(uniqueTrackingID)
-                + "&domain=" + encodeURIComponent(domain)
-                + "&data=" + encodeURIComponent(JSON.stringify(data))
-            );
-        }
-    },
-    'pageLoadedCallback': function (requestAccepted, status) {
-
-        document.body.style.visibility = 'visible';
-        pageLoadedCallbackTriggered = true;
-
-        if ((status.faillisted === true || status.faillisted == "true" || status.blocked === true || status.blocked == "true" ) && status.error_code != 25) {
-            ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=block&reason=other&uid=" + encodeURIComponent(uniqueTrackingID));
-        }
-
-        if (status.errorcode && !status.error_code) {
-            status.error_code = status.errorcode;
-        }
-
-        if (status.error_code) {
-            ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=errorcode&code=" + encodeURIComponent(status.error_code) + "&uid=" + encodeURIComponent(uniqueTrackingID));
-
-            if ([18, 19].indexOf(parseInt(status.error_code)) != -1 && fallbackTriggered == false) {
-                fallbackTriggered = true;
-                if (typeof loadFeed === "function") {
-                    window.location.href = '//' + location.host;
-                }
-            }
-
-            if (status.error_code == 20) {
-                window.location.replace("//dp.g.doubleclick.net/apps/domainpark/domainpark.cgi?client=" + encodeURIComponent((pageOptions.pubid.match(/^ca-/i) ? "" : "ca-") + pageOptions.pubid) + "&domain_name=" + encodeURIComponent(domain) + "&output=html&drid=" + encodeURIComponent(pageOptions.domainRegistrant));
-            }
-        }
-
-        if (status.needsreview === true || status.needsreview == "true") {
-            ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=needsreview&uid=" + encodeURIComponent(uniqueTrackingID));
-        }
-
-        if ((status.adult === true || status.adult == "true") && !isAdult) {
-            ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=adult&uid=" + encodeURIComponent(uniqueTrackingID));
-        } else if ((status.adult === false || status.adult == "false") && isAdult) {
-            ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=nonadult&uid=" + encodeURIComponent(uniqueTrackingID));
-        }
-
-        // -- google parking
-        if (requestAccepted) {
-            if (status.feed) {
-                ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=feed&feed=" + encodeURIComponent(status.feed) + "&uid=" + encodeURIComponent(uniqueTrackingID));
-            }
-            if (status.error_code) {
-                ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=answercheck&answer=error_" + encodeURIComponent(status.error_code) + "&uid=" + encodeURIComponent(uniqueTrackingID));
-            } else {
-                ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=answercheck&answer=yes&uid=" + encodeURIComponent(uniqueTrackingID));
-            }
-        } else {
-            ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=answercheck&answer=rejected&uid=" + encodeURIComponent(uniqueTrackingID));
-        }
-    }
-}
-
-var x = function (obj1, obj2) {
-    if (typeof obj1 != "object")
-        obj1 = {};
-
-    for (var key in obj2)
-        obj1[key] = obj2[key];
-
-    return obj1;
-};
-
-function getXMLhttp() {
-    var xmlHttp = null;
-    try {
-        xmlHttp = new XMLHttpRequest();
-    } catch (e) {
-        try {
-            xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (ex) {
-            try {
-                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (exc) {
-            }
-        }
-    }
-    return xmlHttp;
-}
-
-function ajaxQuery(url) {
-    if (adtest == 'on') return false;
-    xmlHttp = getXMLhttp();
-    if (!xmlHttp) return ajaxBackfill(url);
-    xmlHttp.open("GET", url, false);
-    return xmlHttp.send(null);
-}
-
-function ajaxBackfill(url) {
-    if (adtest == 'on') return false;
-    if (url.indexOf("&toggle=browserjs") > -1) return false;
-    try {
-        var img = document.createElement('img');
-        img.style.visibility = 'hidden';
-        img.style.width = '1px';
-        img.style.height = '1px';
-        img.src = url + "&_t=" + new Date().getTime();
-        document.body.appendChild(img);
-    } catch (e) {
-    }
-}
-
-var waitTime = 0;
-var timeout = 2000;
-var waitStep = 1000;
-function listenFor1TierResponse() {
-
-    if (typeof pageLoadedCallbackTriggered == 'undefined') {
-        return;
-    }
-
-    if (waitTime < timeout && pageLoadedCallbackTriggered == false) {
-        waitTime = waitTime + waitStep;
-        setTimeout(listenFor1TierResponse, waitStep);
-        return;
-    }
-
-    if (pageLoadedCallbackTriggered == false) {
-        document.body.style.visibility = 'visible';
-    }
-}
-listenFor1TierResponse();
-
-
-ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&toggle=browserjs&uid=" + encodeURIComponent(uniqueTrackingID));
-</script><script type="text/javascript">x(pageOptions, {resultsPageBaseUrl: 'http://ww38.zenzapis.xyz/?ts=fENsZWFuUGVwcGVybWludEJsYWNrfHw1Y2U4NHxidWNrZXQxMDN8fHx8fHw2NTJkMjFjN2JjY2U2fHx8MTY5NzQ1NjU4My43ODA0fDhkN2ViM2FiYjgxZDk3YTIyZjdkNzAxZGU5OWM1ZDM5YzE3MDFlZmZ8fHx8fDF8fDB8MHx8fHwxfHx8fHwwfDB8fHx8fHx8fHx8MHwwfHwwfHx8MHwwfGV5Sm9iQ0k2SW1WdUluMD18fDF8VzEwPXwxNTRiY2I0YThmNjBjNTNmNmRhNGEwODU3NGU4YWYyZTM3ZDdkNWE1fDB8ZHAtdGVhbWludGVybmV0MDlfM3BofDB8MHw%3D',hl: 'hi',kw: '',terms: '',uiOptimize: true, channel: '000001,bucket103', pubId: 'dp-teaminternet09_3ph',adtest: 'off',personalizedAds: false,clicktrackUrl: 'https://trkpc.net/track.' + 'php?click=caf' + '&domain=zenzapis.xyz&uid=MTY5NzQ1NjU4My43NzM0OmZkZWVhOWM3MThlMDZhZDBjNTEyMTFmZGYwYTYxYWFiNmQ1NzQzYzY4MTNiMzdiZTM0ZWRiNWIyZGM1YWZlMTk6NjUyZDIxYzdiY2QwNw%3D%3D&ts=fENsZWFuUGVwcGVybWludEJsYWNrfHw1Y2U4NHxidWNrZXQxMDN8fHx8fHw2NTJkMjFjN2JjY2U2fHx8MTY5NzQ1NjU4My43ODAzfGQ4Y2Y1YzQ2OTIxNmFjNGY2NjVhYjNhODU4N2MyZmFhYzA1Zjk3ZjB8fHx8fDF8fDB8MHx8fHwxfHx8fHwwfDB8fHx8fHx8fHx8MHwwfHwwfHx8MHwwfGV5Sm9iQ0k2SW1WdUluMD18fDF8VzEwPXwxNTRiY2I0YThmNjBjNTNmNmRhNGEwODU3NGU4YWYyZTM3ZDdkNWE1fDB8ZHAtdGVhbWludGVybmV0MDlfM3BofDB8MHw%3D&adtest=off' });</script>
-        <script type="text/javascript">x(pageOptions, {"hl":"en"} );</script>
-        <script type="text/javascript">x(pageOptions, { domainRegistrant:'as-drid-2453022200379808' } );</script>
-        <script type="text/javascript">
-                function loadFeed() { var c = google.ads.domains.Caf;var a=Array.prototype.slice.call(arguments);switch(a.length) { case 1:return new c(a[0]);case 2:return new c(a[0],a[1]);case 3:return new c(a[0],a[1],a[2]);case 4:return new c(a[0],a[1],a[2],a[3]);case 5:return new c(a[0],a[1],a[2],a[3],a[4]); } return c.apply(null,a); }
-                function relatedCallback(options) { return false; } function relatedFallback(callback) { return callback(); }
-    </script>
-
+<script type="text/javascript">var isAdult=false;         var containerNames=[];         var uniqueTrackingID='MTcwNDk1Nzc3Mi4wMzE2OjBkNzNjNzFmOTQ5YzY5YTI2ZWI3Nzg0ZGFjZmIxYzA0NzlhNmM4MzJjZjJhMDVhN2Y5ZWFlNjAxMjQ2MDA2ZDY6NjU5Zjk3NGMwN2I3Ng==';         var search='';         var themedata='fENsZWFuUGVwcGVybWludEJsYWNrfHw1Y2U4NHxidWNrZXQxMDN8fHx8fHw2NTlmOTc0YzA3YjUyfHx8MTcwNDk1Nzc3Mi4wNDA0fGVhYjdjNDk5MWI4OGU3NmM2ZTk3ZTYzYjMyMTgzNWI4NzY5MTA5ZTd8fHx8fDF8fDB8MHx8fHwxfHx8fHwwfDB8fHx8fHx8fHx8MHwwfHwwfHx8MHwwfGV5Sm9iQ0k2SW1WdUluMD18fDF8VzEwPXxiZjEwZjFiODg3YTRmNjE4ZGY1MGM3YTY1ZGEzMDAwYWVmMjg4YTkxfDB8ZHAtdGVhbWludGVybmV0MDlfM3BofDB8MHw=';         var domain='zenzapis.xyz';         var scriptPath='';         var adtest='off';if(top.location!==location) { top.location.href=location.protocol + '//' + location.host + location.pathname + (location.search ? location.search + '&' : '?') + '_xafvr=MDdjYWNlMGE3NzQ4N2EzNDhiMDczZjQ2YjEzOTdhNGMxZTlhMDUxZSw2NTlmOTc0YzA5ZGUx'; }var pageLoadedCallbackTriggered = false;var fallbackTriggered = false;var formerCalledArguments = false;var pageOptions = {'pubId': 'dp-teaminternet01','resultsPageBaseUrl': '//' + location.host + '/?ts=','fontFamily': 'arial','optimizeTerms': true,'maxTermLength': 40,'adtest': true,'clicktrackUrl': '//' + location.host + '/track.php?','attributionText': 'Ads','colorAttribution': '#b7b7b7','fontSizeAttribution': 16,'attributionBold': false,'rolloverLinkBold': false,'fontFamilyAttribution': 'arial','adLoadedCallback': function(containerName, adsLoaded, isExperimentVariant, callbackOptions) {if (!adsLoaded) {try {var ele = document.getElementById(container).getElementsByTagName('iframe')[0];var vars = JSON.parse(ele.name.substr(ele.id.length + 1));if (typeof vars[ele.id].type == "string" && vars[ele.id].type == "relatedsearch") {relatedFallback((function () {relatedCallback(vars[ele.id]);}));}} catch (err) {if (!(err instanceof SyntaxError)) {throw err;}}} else if (containerName in containerNames) {var data = {containerName: containerName,adsLoaded: adsLoaded,isExperimentVariant: isExperimentVariant,callbackOptions: callbackOptions,terms: pageOptions.terms};ajaxQuery(scriptPath + "/track.php"+ "?toggle=adloaded"+ "&uid=" + encodeURIComponent(uniqueTrackingID)+ "&domain=" + encodeURIComponent(domain)+ "&data=" + encodeURIComponent(JSON.stringify(data)));}},'pageLoadedCallback': function (requestAccepted, status) {document.body.style.visibility = 'visible';pageLoadedCallbackTriggered = true;if ((status.faillisted === true || status.faillisted == "true" || status.blocked === true || status.blocked == "true" ) && status.error_code != 25) {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=block&reason=other&uid=" + encodeURIComponent(uniqueTrackingID));}if (status.errorcode && !status.error_code) {status.error_code = status.errorcode;}if (status.error_code) {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=errorcode&code=" + encodeURIComponent(status.error_code) + "&uid=" + encodeURIComponent(uniqueTrackingID));if ([18, 19].indexOf(parseInt(status.error_code)) != -1 && fallbackTriggered == false) {fallbackTriggered = true;if (typeof loadFeed === "function") {window.location.href = '//' + location.host;}}if (status.error_code == 20) {window.location.replace("//dp.g.doubleclick.net/apps/domainpark/domainpark.cgi?client=" + encodeURIComponent((pageOptions.pubid.match(/^ca-/i) ? "" : "ca-") + pageOptions.pubid) + "&domain_name=" + encodeURIComponent(domain) + "&output=html&drid=" + encodeURIComponent(pageOptions.domainRegistrant));}}if (status.needsreview === true || status.needsreview == "true") {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=needsreview&uid=" + encodeURIComponent(uniqueTrackingID));}if ((status.adult === true || status.adult == "true") && !isAdult) {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=adult&uid=" + encodeURIComponent(uniqueTrackingID));} else if ((status.adult === false || status.adult == "false") && isAdult) {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=nonadult&uid=" + encodeURIComponent(uniqueTrackingID));}if (requestAccepted) {if (status.feed) {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=feed&feed=" + encodeURIComponent(status.feed) + "&uid=" + encodeURIComponent(uniqueTrackingID));}if (status.error_code) {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=answercheck&answer=error_" + encodeURIComponent(status.error_code) + "&uid=" + encodeURIComponent(uniqueTrackingID));} else {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=answercheck&answer=yes&uid=" + encodeURIComponent(uniqueTrackingID));}} else {ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&caf=1&toggle=answercheck&answer=rejected&uid=" + encodeURIComponent(uniqueTrackingID));}}};var x = function (obj1, obj2) {if (typeof obj1 != "object")obj1 = {};for (var key in obj2)obj1[key] = obj2[key];return obj1;};function getXMLhttp() {var xmlHttp = null;try {xmlHttp = new XMLHttpRequest();} catch (e) {try {xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");} catch (ex) {try {xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");} catch (exc) {}}}return xmlHttp;}function ajaxQuery(url) {if (adtest == 'on') return false;xmlHttp = getXMLhttp();if (!xmlHttp) return ajaxBackfill(url);xmlHttp.open("GET", url, false);return xmlHttp.send(null);}function ajaxBackfill(url) {if (adtest == 'on') return false;if (url.indexOf("&toggle=browserjs") > -1) return false;try {var img = document.createElement('img');img.style.visibility = 'hidden';img.style.width = '1px';img.style.height = '1px';img.src = url + "&_t=" + new Date().getTime();document.body.appendChild(img);} catch (e) {}}ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&toggle=browserjs&uid=" + encodeURIComponent(uniqueTrackingID));x(pageOptions, {resultsPageBaseUrl: 'http://ww38.zenzapis.xyz/?ts=fENsZWFuUGVwcGVybWludEJsYWNrfHw1Y2U4NHxidWNrZXQxMDN8fHx8fHw2NTlmOTc0YzA3YjUyfHx8MTcwNDk1Nzc3Mi4wNDA1fGJiNWY3YmZhYjZiNDg2NDQ3MjJlM2NmM2MwYmJkOWFmZjdkZjE2NTV8fHx8fDF8fDB8MHx8fHwxfHx8fHwwfDB8fHx8fHx8fHx8MHwwfHwwfHx8MHwwfGV5Sm9iQ0k2SW1WdUluMD18fDF8VzEwPXxiZjEwZjFiODg3YTRmNjE4ZGY1MGM3YTY1ZGEzMDAwYWVmMjg4YTkxfDB8ZHAtdGVhbWludGVybmV0MDlfM3BofDB8MHw%3D',hl: 'hi',kw: '',terms: '',uiOptimize: true, channel: '000001,bucket103', pubId: 'dp-teaminternet09_3ph',adtest: 'off',personalizedAds: false,clicktrackUrl: 'https://trkpc.net/track.' + 'php?click=caf' + '&domain=zenzapis.xyz&uid=MTcwNDk1Nzc3Mi4wMzE2OjBkNzNjNzFmOTQ5YzY5YTI2ZWI3Nzg0ZGFjZmIxYzA0NzlhNmM4MzJjZjJhMDVhN2Y5ZWFlNjAxMjQ2MDA2ZDY6NjU5Zjk3NGMwN2I3Ng%3D%3D&ts=fENsZWFuUGVwcGVybWludEJsYWNrfHw1Y2U4NHxidWNrZXQxMDN8fHx8fHw2NTlmOTc0YzA3YjUyfHx8MTcwNDk1Nzc3Mi4wNDA0fGVhYjdjNDk5MWI4OGU3NmM2ZTk3ZTYzYjMyMTgzNWI4NzY5MTA5ZTd8fHx8fDF8fDB8MHx8fHwxfHx8fHwwfDB8fHx8fHx8fHx8MHwwfHwwfHx8MHwwfGV5Sm9iQ0k2SW1WdUluMD18fDF8VzEwPXxiZjEwZjFiODg3YTRmNjE4ZGY1MGM3YTY1ZGEzMDAwYWVmMjg4YTkxfDB8ZHAtdGVhbWludGVybmV0MDlfM3BofDB8MHw%3D&adtest=off' });x(pageOptions, {"hl":"en"} );x(pageOptions, { domainRegistrant:'as-drid-2453022200379808' } );function loadFeed() {var s = document.createElement('script');s.src = '//www.google.com/adsense/domains/caf.js?abp=1';document.body.appendChild(s);var a = Array.prototype.slice.call(arguments);s.onload = function () {var c = google.ads.domains.Caf;switch (a.length) {case 1:return new c(a[0]);case 2:return new c(a[0], a[1]);case 3:return new c(a[0], a[1], a[2]);case 4:return new c(a[0], a[1], a[2], a[3]);case 5:return new c(a[0], a[1], a[2], a[3], a[4]);}return c.apply(null, a);};}function relatedCallback(options) {return false;}function relatedFallback(callback) {return callback();}</script>
 <script type="text/javascript">var ls = function(xhr, path, token) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -441,13 +255,29 @@ ajaxQuery(scriptPath + "/track.php?domain=" + encodeURIComponent(domain) + "&tog
         }
     }
     
-    xhr.open('GET', path + '/ls.p' + 'hp?t=652d21c7&token=' + encodeURI(token), true);
+    xhr.open('GET', path + '/ls.p' + 'hp?t=659f974c&token=' + encodeURI(token), true);
     xhr.send();
 };
-ls(new XMLHttpRequest(), scriptPath, '154bcb4a8f60c53f6da4a08574e8af2e37d7d5a5');</script>
-<script type='text/javascript'
-        language='JavaScript'>x(pageOptions, { "styleId":1167268112});</script>
-<script type="text/javascript" language="JavaScript">x(pageOptions);
-    new loadFeed(pageOptions, tcblock, searchboxBlock);</script>
+ls(new XMLHttpRequest(), scriptPath, 'bf10f1b887a4f618df50c7a65da3000aef288a91');</script>
+<script type='text/javascript'>x(pageOptions, { "styleId":1167268112});</script>
+<script>
+    function getLoadFeedArguments() {
+        let arguments = [
+            pageOptions
+        ];
+
+        let possibleArguments = ['adblock', 'adblock1', 'adblock2', 'tcblock', 'searchboxBlock', 'rtblock', 'rsblock', 'searchblock'];
+        for (let i = 0; i < possibleArguments.length; i++) {
+            if (typeof this[possibleArguments[i]] !== 'undefined') {
+                arguments.push(this[possibleArguments[i]]);
+            }
+        }
+
+        return arguments;
+    }
+</script>
+    <script>
+        loadFeed(...getLoadFeedArguments());
+    </script>
 </body>
 </html>

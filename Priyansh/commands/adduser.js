@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "adduser",
+	name: "add",
 	version: "2.4.3",
 	hasPermssion: 0,
 	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
@@ -36,7 +36,7 @@ module.exports.run = async function ({ api, event, args }) {
 
 	async function adduser(id, name) {
 		id = parseInt(id);
-		if (participantIDs.includes(id)) return out(`${name ? name : "Member"} are already in the group.`);
+		if (participantIDs.includes(id)) return out(`${name ? name : "OWNER JI"} YE TO PAHLE SE HI GROUP M ADD H 😅.`);
 		else {
 			var admins = adminIDs.map(e => parseInt(e.id));
 			try {

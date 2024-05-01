@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "match", 
+  name: "pairwith", 
   version: "1.0.1",
   hasPermssion: 0,
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
@@ -38,6 +38,6 @@ const fs = global.nodemodule["fs-extra"];
 
             imglove.push(fs.createReadStream(__dirname + "/cache/avt2.png"));
             imglove.push(fs.createReadStream(__dirname + "/cache/avt.png"));
-      var msg = {body: `⚡️The love ratio between ${namee} and ${name} is ${tle}% 🥰`, mentions: arraytag, attachment: imglove}
+      var msg = {body: `✨ Pairing Successful\n\n✨ Mil Gai Jodi ❤️\n\n✨ Aapas M No. Exchange Kr Lo 😀\n\n✨ Ab Mt Bolna Setting Kra De 😅\n\n✨ ${namee} With ${name}\n\n✨ Love Retion ${tle}% 🥰\n\n✨ MADE BY : MISS.PRIYA`, mentions: arraytag, attachment: imglove}
       return api.sendMessage(msg, event.threadID, event.messageID)
     }
