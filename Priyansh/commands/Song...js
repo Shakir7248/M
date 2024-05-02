@@ -33,7 +33,7 @@ async function downloadMusicFromYoutube(link, path) {
   return returnPromise
 }
 module.exports.config = {
-    name: "music2",
+    name: "song",
     version: "1.0.0",
     hasPermssion: 0,
     credits: "PREM BABU",
